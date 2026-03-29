@@ -1,16 +1,41 @@
-# React + Vite
+# Scalable REST API with Authentication & RBAC
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- JWT Authentication
+- Role-Based Access Control (Admin/User)
+- CRUD APIs
+- Secure password hashing
+- Simple React frontend for testing
 
-Currently, two official plugins are available:
+## Tech Stack
+- Node.js
+- Express.js
+- MongoDB
+- React.js
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Setup Instructions
 
-## React Compiler
+### Backend
+cd backend
+npm install
+npm run dev
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
+cd frontend
+npm install
+npm run dev
 
-## Expanding the ESLint configuration
+## API Endpoints
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Auth
+- POST /api/auth/register
+- POST /api/auth/login
+
+### Posts
+- GET /api/posts
+- POST /api/posts
+- DELETE /api/posts/:id (Admin only)
+
+## Notes
+- Use JWT token in headers:
+Authorization: token

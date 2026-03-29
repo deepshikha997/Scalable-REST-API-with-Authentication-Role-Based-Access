@@ -1,4 +1,4 @@
-# Scalable REST API with Authentication & RBAC
+## Scalable REST API with Authentication & RBAC
 
 ## Features
 - JWT Authentication
